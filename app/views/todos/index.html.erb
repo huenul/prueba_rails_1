@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <li class="active"><a href="http://localhost:3000/todos">Index<span class="sr-only">(current)</span></a></li>
+       <li><a href="http://localhost:3000/todos/new">Nuevo</a></li>
+  </div>
+</nav>
+
+<h1> <center><%= 'PAGINA INDEX ' %> </center></h1>
+<% @todos.each do |todo| %>
+<div class = 'well'>
+<h1> <%= link_to todo.description, todo %> </h1>
+<p> <%= todo.completed %> </p>
+<p> <%= link_to "Borrar"  , todo, method: :delete%> </p>
+</div>
+
+
+<% end %>
